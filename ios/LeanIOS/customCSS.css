@@ -1,0 +1,119 @@
+/* ====================== */
+/* Sticky Header Styles */
+/* ====================== */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ====================== */
+/* Hide Specific Elementor Sections */
+/* ====================== */
+
+/* Cart-related elements (ensure visible) */
+.elementor-element-510856a2 .cart-count,
+.elementor-element-510856a2 .woocommerce-mini-cart {
+  display: block !important;
+}
+
+/* Hidden elements by class and data-id */
+.elementor-element-f8c1ec6,
+.elementor-element-500027e0,
+.elementor-element-19224f55,
+.elementor-element-822d7f6,
+.elementor-element-405d1207,
+.elementor-element-30e2eb11,
+.elementor-element-11dd431a,
+.elementor-element-8234d0c,
+.elementor-element-3b96275c,
+.elementor-element-70b9c43,
+[data-id="f8c1ec6"],
+[data-id="822d7f6"],
+[data-id="19224f55"],
+[data-id="500027e0"],
+[data-id="405d1207"],
+[data-id="30e2eb11"],
+[data-id="11dd431a"],
+[data-id="8234d0c"],
+[data-id="3b96275c"],
+[data-id="70b9c43"],
+[data-id="510856a2"] { 
+  display: none !important;
+}
+
+/* Hide mobile bottom menu */
+.after-append-footer {
+  display: none !important;
+}
+
+/* Hide pre-appended Elementor template content */
+.content-append-before.bzotech-elementor-template {
+  display: none !important;
+}
+
+/* Hide global logo */
+.elbzotech-logo-global-style-image {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+/* ====================== */
+/* Layout Adjustments */
+/* ====================== */
+body {
+  padding-top: 80px !important;
+  padding-bottom: 0 !important;
+  scroll-padding-top: 80px !important;
+}
+
+/* ====================== */
+/* Background Color for Header Containers */
+/* ====================== */
+[data-id="3af58497"],
+[data-id="41029cb6"] {
+  background-color: #F2F2F7 !important;
+}
+
+/* Hide bzotech_list_link_global widget */
+.elementor-element-2a8724fd,
+[data-id="2a8724fd"] {
+  display: none !important;
+}
+/* Set background color for bzotech-mini-cart-global widget */
+.elementor-element-77470bb6,
+[data-id="77470bb6"] {
+  background-color: #F2F2F7 !important;
+}
+/* Set background color for mini-cart-link */
+.elbzotech-bt-default elbzotech-bt-full {
+  background-color: #D43D9D  !important;
+}
+a.mini-cart-link {
+  background-color: #F2F2F7!important;
+}
+
+/* ====================== */
+/* Background Color for Header Containers */
+/* ====================== */
+
+.elementor-element-20c6144e,
+[data-id="3af58497"],
+[data-id="41029cb6"],
+[data-id="20c6144e"] {
+  background-color: #F2F2F7 !important;
+  border-top: none !important;
+}
