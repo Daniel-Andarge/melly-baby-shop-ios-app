@@ -6,7 +6,7 @@ source 'git@github.com:gonativeio/gonative-specs.git'
 
 require_relative './plugins.rb'
 
-target default_app_target do
+target 'MellyBabyShop' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
