@@ -618,7 +618,7 @@
 				BuildIndependentTargetsInParallel = YES;
 				CLASSPREFIX = LEAN;
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1630;
 				ORGANIZATIONNAME = "GoNative.io LLC";
 				TargetAttributes = {
 					2002B49718A9991300495B3D = {
