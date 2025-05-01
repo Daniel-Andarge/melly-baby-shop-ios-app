@@ -1,65 +1,58 @@
-// Mobile Viewport Initialization
-// =============================
-function initMobileViewport() {
-  // Only add viewport meta if it doesn't exist
-  if (!document.querySelector('meta[name="viewport"]')) {
-    const meta = document.createElement('meta');
-    meta.name = 'viewport';
-    meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
-    document.head.appendChild(meta);
-  }
+/** 
+ * ==================== STATUS BAR FIX ==================== 
+ * Forces solid #f8f8f8 background on Android and prevents transparency 
+ */
+const initStatusBar = () => {
+    const statusBarSettings = {
+        style: 'dark',
+        color: '#f8f8f8',
+        overlay: false,
+        blur: false
+    };
 
-  // Disable zoom gestures (optional – Median might handle this natively)
-  document.addEventListener('gesturestart', e => e.preventDefault(), { passive: false });
-}
-
-// Wait for DOM content before initializing
-document.addEventListener('DOMContentLoaded', function () {
-  initMobileViewport();
-
-  // Cart Badge Sync with WooCommerce Mini Cart
-  // ==========================================
-  function updateCartBadge() {
-    const cartCountElement = document.querySelector('.mini-cart-number.set-cart-number');
-    const badge = document.getElementById('cart-badge');
-
-    let count = 0;
-
-    if (cartCountElement) {
-      const raw = parseInt(cartCountElement.innerText);
-      if (!isNaN(raw)) count = raw;
-    }
-
-    if (badge) {
-      badge.innerText = count;
-      badge.style.display = 'inline'; // Always show (or 'none' if you want to hide when 0)
-
-      // Add custom style
-      badge.style.backgroundColor = '#81d1e5';
-      badge.style.color = '#ffffff';
-      badge.style.borderRadius = '12px';
-      badge.style.padding = '2px 6px';
-      badge.style.fontSize = '12px';
-      badge.style.minWidth = '20px';
-      badge.style.textAlign = 'center';
+    if (typeof median !== 'undefined') {
+        median.statusbar.set(statusBarSettings); 
+        setTimeout(() => median.statusbar.set(statusBarSettings), 50);
+        
+        const style = document.createElement('style');
+        style.textContent = `
+            :root {
+                --status-bar-height: 24px;
+            }
+            body {
+                padding-top: var(--status-bar-height) !important;
+                margin-top: 0 !important;
+            }
+        `;
+        document.head.appendChild(style);
     } else {
-      console.warn("cart-badge element not found");
+        console.error("Median status bar method not available!");
     }
-  }
+};
 
-  // Observe cart changes across the page
-  const observer = new MutationObserver(updateCartBadge);
-  observer.observe(document.body, { childList: true, subtree: true });
+/** 
+ * ==================== VIEWPORT MANAGER ==================== 
+ * Handles mobile viewport optimizations 
+ */
+const initMobileViewport = () => {
+    if (!document.querySelector('meta[name="viewport"]')) {
+        const meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+        document.head.insertBefore(meta, document.head.firstChild);
+    }
 
-  // Run initially and after short delay to catch late loads
-  updateCartBadge();
-  setTimeout(updateCartBadge, 1000);
-});
+    const setVh = () => {
+        document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+    };
+    window.addEventListener('resize', setVh);
+    setVh();
+};
 
 
-
-// Error Handling
-// ==============
-window.addEventListener('error', function (e) {
-  console.error('Median Custom JS Error:', e.message, e.filename, e.lineno);
+/** 
+ * ==================== ERROR HANDLING ==================== 
+ */
+window.addEventListener('error', (e) => {
+    console.error('Initialization Error:", e);
 });

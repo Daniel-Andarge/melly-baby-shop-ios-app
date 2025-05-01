@@ -1235,7 +1235,7 @@ static NSInteger _currentWindows = 0;
         return;
     }
     
-    BOOL openShareDialog = [navigationAction.request.URL.scheme isEqualToString:@"data"];
+    BOOL openShareDialog = [navigationAction.request.URL.scheme isEqualToString:@"data"] && ![LEANUtilities isOnePixelImage:navigationAction.request.URL];
     if (@available(iOS 15.0, *)) {
         if (navigationAction.shouldPerformDownload) {
             openShareDialog = [((LEANAppDelegate *)UIApplication.sharedApplication.delegate).bridge webView:webView shouldDownloadUrl:navigationAction.request.URL];

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1630"
+   LastUpgradeVersion = "1600"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2002B49718A9991300495B3D"
-               BuildableName = "MellyBabyShop.app"
+               BuildableName = "Median.app"
                BlueprintName = "MellyBabyShop"
                ReferencedContainer = "container:MellyBabyShop.xcodeproj">
             </BuildableReference>
@@ -31,7 +31,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2002B49718A9991300495B3D"
-            BuildableName = "MellyBabyShop.app"
+            BuildableName = "Median.app"
             BlueprintName = "MellyBabyShop"
             ReferencedContainer = "container:MellyBabyShop.xcodeproj">
          </BuildableReference>
@@ -54,7 +54,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2002B49718A9991300495B3D"
-            BuildableName = "MellyBabyShop.app"
+            BuildableName = "Median.app"
             BlueprintName = "MellyBabyShop"
             ReferencedContainer = "container:MellyBabyShop.xcodeproj">
          </BuildableReference>
@@ -71,7 +71,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2002B49718A9991300495B3D"
-            BuildableName = "MellyBabyShop.app"
+            BuildableName = "Median.app"
             BlueprintName = "MellyBabyShop"
             ReferencedContainer = "container:MellyBabyShop.xcodeproj">
          </BuildableReference>

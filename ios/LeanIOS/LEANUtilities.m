@@ -871,4 +871,22 @@
     }];
 }
 
++ (BOOL)isOnePixelImage:(NSURL *)url {
+    if (![url.scheme isEqualToString:@"data"]) {
+        return NO;
+    }
+
+    NSData *imageData = [NSData dataWithContentsOfURL:url];
+    if (!imageData) {
+        return NO;
+    }
+
+    UIImage *image = [UIImage imageWithData:imageData];
+    if (!image) {
+        return NO;
+    }
+
+    return image.size.width == 1 && image.size.height == 1;
+}
+
 @end

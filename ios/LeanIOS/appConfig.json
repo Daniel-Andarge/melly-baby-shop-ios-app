@@ -29,13 +29,17 @@
     "forceSessionCookieExpiry": 0,
     "iosCustomHeaders": {},
     "androidCustomHeaders": {},
-    "version": 204
+    "version": 355
   },
   "navigation": {
     "tabNavigation": {
       "tabSelectionConfig": [
         {
           "id": "1",
+          "regex": ".*"
+        },
+        {
+          "id": "2",
           "regex": ".*"
         }
       ],
@@ -45,16 +49,18 @@
           "items": [
             {
               "label": "Home",
-              "icon": "fas fa-house-chimney",
-              "inactiveIcon": "far fa-house-chimney",
+              "icon": "fas fa-home",
+              "inactiveIcon": "far fa-home",
               "url": "https://www.mellybabyshop.co.za/",
+              "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/?$",
               "subLinks": []
             },
             {
               "label": "Shop",
-              "icon": "fas fa-bag-shopping",
-              "inactiveIcon": "far fa-bag-shopping",
-              "url": "https://www.mellybabyshop.co.za/shop",
+              "icon": "fas fa-store",
+              "inactiveIcon": "far fa-store",
+              "url": "https://www.mellybabyshop.co.za/shop/",
+              "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/shop\\/?$",
               "subLinks": []
             },
             {
@@ -62,16 +68,22 @@
               "icon": "fas fa-heart",
               "inactiveIcon": "far fa-heart",
               "url": "https://www.mellybabyshop.co.za/wishlist/",
+              "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/wishlist\\/?$",
               "subLinks": []
             },
             {
-              "label": "Categories",
-              "icon": "fas fa-grid-2",
-              "inactiveIcon": "far fa-grid-2",
-              "url": "https://www.mellybabyshop.co.za/categories/",
+              "label": "My Account",
+              "icon": "fas fa-user",
+              "inactiveIcon": "far fa-user",
+              "url": "https://www.mellybabyshop.co.za/mobile-my-account/",
+              "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-my-account\\/?$",
               "subLinks": []
             }
           ]
+        },
+        {
+          "id": "2",
+          "items": []
         }
       ],
       "active": true
@@ -91,46 +103,57 @@
           "active": true,
           "items": [
             {
-              "url": "https://www.mellybabyshop.co.za/",
-              "label": "Home",
-              "subLinks": [],
-              "icon": "md mi-local-shipping"
+              "label": "SHOP BY CATEGORIES",
+              "icon": " ",
+              "subLinks": []
             },
             {
-              "url": "https://www.mellybabyshop.co.za/track-your-order/",
-              "label": "Track Your Order",
-              "subLinks": [],
-              "icon": "md mi-local-shipping"
+              "url": "https://www.mellybabyshop.co.za/baby-feeding/",
+              "label": "Feeding",
+              "icon": "fas fa-utensils",
+              "subLinks": []
             },
             {
-              "url": "https://www.mellybabyshop.co.za/about/",
-              "label": "About Us",
-              "subLinks": [],
-              "icon": "fas fa-info-circle"
+              "url": "https://www.mellybabyshop.co.za/newborn-products/",
+              "label": "Newborn Products",
+              "icon": "fas fa-baby-carriage",
+              "subLinks": []
             },
             {
-              "url": "https://www.mellybabyshop.co.za/privacy-policy/",
-              "label": "Privacy Policy",
-              "subLinks": [],
-              "icon": "fas fa-user-shield"
+              "url": "https://www.mellybabyshop.co.za/mom-baby-essentials/",
+              "label": "Mom & Baby Essentials",
+              "icon": "fas fa-baby",
+              "subLinks": []
             },
             {
-              "url": "https://www.mellybabyshop.co.za/shipping-returns/",
-              "label": "Shipping & Returns",
-              "subLinks": [],
-              "icon": "md mi-local-shipping"
+              "url": "https://www.mellybabyshop.co.za/nursery-items/",
+              "label": "Nursery Items",
+              "icon": "fas fa-bed",
+              "subLinks": []
             },
             {
-              "url": "https://www.mellybabyshop.co.za/faqs/",
-              "label": "FAQs",
-              "subLinks": [],
-              "icon": "fas fa-question-circle"
+              "url": "https://www.mellybabyshop.co.za/travel-gear/",
+              "label": "Travel Gear",
+              "icon": "fas fa-suitcase-rolling",
+              "subLinks": []
             },
             {
-              "url": "https://www.mellybabyshop.co.za/contact/",
-              "label": "Contact Us",
-              "subLinks": [],
-              "icon": "md mi-email"
+              "url": "https://www.mellybabyshop.co.za/baby-bathing-grooming/",
+              "label": "Bathing & Grooming",
+              "icon": "fas fa-bath",
+              "subLinks": []
+            },
+            {
+              "url": "https://www.mellybabyshop.co.za/toys-playtime/toys-and-games/",
+              "label": "Toys & Playtime",
+              "icon": "fas fa-puzzle-piece",
+              "subLinks": []
+            },
+            {
+              "url": "https://www.mellybabyshop.co.za/strollers-prams/",
+              "label": "Strollers & Prams",
+              "icon": "fas fa-baby-carriage",
+              "subLinks": []
             }
           ],
           "name": "default"
@@ -208,9 +231,94 @@
       "titles": [
         {
           "id": "1",
-          "regex": "Shop(\\s*-\\s*Melly Baby Shop)?",
-          "replacement": "Shop",
-          "customTitle": false
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/?$",
+          "title": "Home",
+          "showImage": false,
+          "customTitle": true
+        },
+        {
+          "id": "2",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/baby-feeding\\/?$",
+          "title": "Feeding",
+          "showImage": false,
+          "customTitle": true
+        },
+        {
+          "id": "3",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mom-baby-essentials\\/?$",
+          "title": "Mom & Baby Essentials",
+          "showImage": false,
+          "customTitle": true
+        },
+        {
+          "id": "4",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/newborn-products\\/?$",
+          "title": "Newborn Products",
+          "showImage": false,
+          "customTitle": true
+        },
+        {
+          "id": "5",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/nursery-items\\/?$",
+          "title": "Nursery Items",
+          "showImage": false,
+          "customTitle": true
+        },
+        {
+          "id": "6",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/travel-gear\\/?$",
+          "title": "Travel Gear",
+          "showImage": false,
+          "customTitle": true
+        },
+        {
+          "id": "7",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/baby-bathing-grooming\\/?$",
+          "title": "Bathing & Grooming",
+          "showImage": false,
+          "customTitle": true
+        },
+        {
+          "id": "8",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/toys-playtime\\/toys-and-games\\/?$",
+          "title": "Toys & Playtime",
+          "showImage": false,
+          "customTitle": true
+        },
+        {
+          "id": "9",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/strollers-prams\\/?$",
+          "title": "Strollers & Prams",
+          "showImage": false,
+          "customTitle": true
+        },
+        {
+          "id": "10",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/wishlist\\/?$",
+          "title": "Wishlist",
+          "showImage": false,
+          "customTitle": true
+        },
+        {
+          "id": "11",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/shop\\/?$",
+          "title": "Shop",
+          "showImage": false,
+          "customTitle": true
+        },
+        {
+          "id": "12",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-my-account\\/?$",
+          "title": "My Account",
+          "showImage": false,
+          "customTitle": true
+        },
+        {
+          "id": "13",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-my-account\\/?$",
+          "title": "My Account",
+          "showImage": false,
+          "customTitle": true
         }
       ],
       "active": true
@@ -220,15 +328,155 @@
       "actions": [
         {
           "id": "1",
+          "items": [
+            {
+              "icon": "fas fa-magnifying-glass",
+              "label": "",
+              "url": "https://www.mellybabyshop.co.za/?s=",
+              "system": "search"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "items": []
+        },
+        {
+          "id": "3",
+          "items": []
+        },
+        {
+          "id": "4",
+          "items": []
+        },
+        {
+          "id": "5",
+          "items": []
+        },
+        {
+          "id": "6",
+          "items": []
+        },
+        {
+          "id": "7",
+          "items": []
+        },
+        {
+          "id": "8",
+          "items": []
+        },
+        {
+          "id": "9",
+          "items": []
+        },
+        {
+          "id": "10",
+          "items": []
+        },
+        {
+          "id": "11",
+          "items": []
+        },
+        {
+          "id": "12",
+          "items": []
+        },
+        {
+          "id": "13",
           "items": []
         }
       ],
       "actionSelection": [
         {
           "id": "1",
-          "label": "Top Nav Bar Menu 1 - All Pages",
-          "regex": ".*",
-          "custom": false
+          "label": "Home",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/?$",
+          "custom": false,
+          "url": "https://www.mellybabyshop.co.za/"
+        },
+        {
+          "id": "2",
+          "label": "Feeding",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/baby-feeding\\/?$",
+          "custom": false,
+          "url": "https://www.mellybabyshop.co.za/baby-feeding/"
+        },
+        {
+          "id": "3",
+          "label": "Mom & Baby Essentials",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mom-baby-essentials\\/?$",
+          "custom": false,
+          "url": "https://www.mellybabyshop.co.za/mom-baby-essentials/"
+        },
+        {
+          "id": "4",
+          "label": "Newborn Products",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/newborn-products\\/?$",
+          "custom": false,
+          "url": "https://www.mellybabyshop.co.za/newborn-products/"
+        },
+        {
+          "id": "5",
+          "label": "Nursery Items",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/nursery-items\\/?$",
+          "custom": false,
+          "url": "https://www.mellybabyshop.co.za/nursery-items/"
+        },
+        {
+          "id": "6",
+          "label": "Travel Gear",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/travel-gear\\/?$",
+          "custom": false,
+          "url": "https://www.mellybabyshop.co.za/travel-gear/"
+        },
+        {
+          "id": "7",
+          "label": "Bathing & Grooming",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/baby-bathing-grooming\\/?$",
+          "custom": false,
+          "url": "https://www.mellybabyshop.co.za/baby-bathing-grooming/"
+        },
+        {
+          "id": "8",
+          "label": "Toys & Playtime",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/toys-and-games\\/?$",
+          "custom": false,
+          "url": "https://www.mellybabyshop.co.za/mom-baby-essentials/toys-and-games/"
+        },
+        {
+          "id": "9",
+          "label": "Strollers & Prams",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/strollers-prams\\/?$",
+          "custom": false,
+          "url": "https://www.mellybabyshop.co.za/strollers-prams/"
+        },
+        {
+          "id": "10",
+          "label": "Wishlist",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/wishlist\\/?$",
+          "custom": false,
+          "url": "https://www.mellybabyshop.co.za/wishlist/"
+        },
+        {
+          "id": "11",
+          "label": "Shop",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/shop\\/?$",
+          "custom": false,
+          "url": "https://www.mellybabyshop.co.za/shop/"
+        },
+        {
+          "id": "12",
+          "label": "My Account",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-my-account\\/?$",
+          "custom": false,
+          "url": "https://www.mellybabyshop.co.za/mobile-my-account/"
+        },
+        {
+          "id": "13",
+          "label": "My Account",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-my-account\\/?$",
+          "custom": false,
+          "url": "https://www.mellybabyshop.co.za/mobile-my-account/"
         }
       ],
       "active": true
@@ -242,20 +490,56 @@
     "navigationLevels": {
       "levels": [
         {
-          "label": "",
-          "regex": ".*",
+          "label": "Primary Tabs",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/(|shop|)\\/?$",
           "custom": false,
+          "description": "Main bottom navigation tabs (Home, Shop, Wishlist) open in the main window",
           "level": 1
+        },
+        {
+          "label": "Category Pages",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/(baby-feeding|wishlist|travel-gear|strollers-prams|baby-bathing-grooming|mom-baby-essentials|baby-travel-gear|newborn-products|toys-and-games|nursery-items)\\/?$",
+          "custom": true,
+          "backButtonPriority": true,
+          "description": "Product category and utility pages open in a new window",
+          "level": 2
+        },
+        {
+          "label": "Transaction Flow",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/(cart|checkout)\\/?$",
+          "custom": true,
+          "forceNewWindow": true,
+          "disableSwipeBack": true,
+          "description": "Cart and checkout process flows open in isolated new windows",
+          "level": 3
+        },
+        {
+          "label": "Product Pages",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/product\\/[a-zA-Z0-9-]+\\/?$",
+          "custom": true,
+          "backButtonPriority": true,
+          "preload": true,
+          "description": "Individual product pages open in a new window with back navigation",
+          "level": 4
+        },
+        {
+          "label": "External Links",
+          "regex": "https?:\\/\\/(?!mellybabyshop\\.co\\.za).*",
+          "custom": true,
+          "openInSystemBrowser": true,
+          "description": "External links open in the system browser, not inside the app",
+          "level": 5
         }
       ],
       "active": true
     },
     "toolbarNavigation": {
-      "enabled": true,
-      "visibilityByPages": "allPages",
+      "enabled": false,
+      "visibilityByPages": "specificPages",
       "visibilityByBackButton": "backButtonActive",
       "regexes": [
         {
+          "id": 1,
           "enabled": true,
           "regex": ".*"
         }
@@ -303,7 +587,7 @@
     "androidShowOfflinePage": true,
     "androidConnectionOfflineTime": 10,
     "iosSettings": {},
-    "swipeGestures": true,
+    "swipeGestures": false,
     "maxWindows": {
       "enabled": false,
       "numWindows": 5,
@@ -398,7 +682,7 @@
     "androidTabPressedBackgroundColor": "#CCCCCC",
     "androidStatusBarBackgroundColor": "#5C5C5C",
     "androidShowLogoInSideBar": true,
-    "androidShowAppNameInSideBar": true,
+    "androidShowAppNameInSideBar": false,
     "androidSwipeNavigationBackgroundColor": "#FFFFFF",
     "androidSwipeNavigationActiveColor": "#000000",
     "androidSwipeNavigationInactiveColor": "#666666",
@@ -424,7 +708,12 @@
     "androidWebviewTextZoom": null,
     "androidIcon": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/app_icon_ios_1743883226394.png",
     "iosIcon": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/app_icon_ios_1744223987681.png",
-    "customIcons": {},
+    "customIcons": {
+      "fontelloSessionId": "f6cff08a9e0d993ce8dc18720462623f",
+      "css": "https://s3.amazonaws.com/gonativeio/custom_icons/1745693584994_qx909kxjmbhf4/custom-icons.css",
+      "font": "https://s3.amazonaws.com/gonativeio/custom_icons/1745693584994_qx909kxjmbhf4/custom-icons.ttf",
+      "fontelloConfigJson": "https://s3.amazonaws.com/gonativeio/custom_icons/1745693584994_qx909kxjmbhf4/config.json"
+    },
     "iosStatusBarStyle": "auto",
     "iosEnableOverlayInStatusBar": false,
     "androidStatusBarStyle": "auto",
@@ -434,14 +723,14 @@
     "androidActivityIndicatorColor": "#808080",
     "androidActivityIndicatorColorDark": "#808080",
     "forceViewportWidth": null,
-    "pinchToZoom": true,
+    "pinchToZoom": false,
     "iosDynamicType": true,
-    "navigationTitleImageLocation": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/ios-Light_1743886530679.png",
+    "navigationTitleImageLocation": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/CAT_1745695991870.png",
     "navigationTitleImageLocationDark": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/ios-Light_1743886530679.png",
     "androidHeaderImage": "assets/defaults/app-icon-placeholder.png",
     "androidHeaderImageDark": "assets/defaults/app-icon-placeholder.png",
     "iosHeaderImageDark": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/ios-Dark_1744223908421.png",
-    "customCSSUrl": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/custom_css_1744925060482.css"
+    "customCSSUrl": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/custom_css_1746138241169.css"
   },
   "permissions": {
     "usesGeolocation": false,
@@ -476,6 +765,7 @@
     }
   },
   "script": {
-    "customJSUrl": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/custom_js_1744574731378.js"
+    "customJSUrl": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/custom_js_1745870533949.js",
+    "androidCustomJSUrl": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/android_custom_js_1745870490104.js"
   }
 }
