@@ -1,166 +1,47 @@
 {
   "general": {
+    "userAgentRegexes": [],
+    "replaceStrings": [],
+    "publicKey": "bzqyyn",
+    "deviceRegKey": "4rkv19496uv2p8k8nay70ny3k0",
+    "appName": "Melly Baby Shop",
+    "initialUrl": "https://mellybabyshop.co.za/",
+    "keepScreenOn": null,
     "screenOrientation": {
       "iphone": null,
       "ipad": null,
       "androidPhone": null,
       "androidTablet": null
     },
-    "userAgentRegexes": [],
-    "replaceStrings": [],
-    "nativeBridgeUrls": [],
-    "languages": [],
-    "userAgentAdd": "median",
     "enableWindowOpen": true,
+    "userAgentAdd": "median",
     "forceUserAgent": "",
-    "publicKey": "bzqyyn",
-    "deviceRegKey": "4rkv19496uv2p8k8nay70ny3k0",
-    "appName": "Melly Baby Shop",
-    "initialUrl": "https://mellybabyshop.co.za/",
-    "androidPackageName": "co.median.android.bzqyyn",
-    "iosBundleId": "co.median.ios.bzqyyn",
-    "keepScreenOn": null,
     "iosUserAgentAdd": "median",
     "iosForceUserAgent": "",
     "androidUserAgentAdd": "median",
     "androidForceUserAgent": "",
+    "languages": [],
+    "nativeBridgeUrls": [],
+    "iosBundleId": "co.mellybabyshop.co.za",
+    "androidPackageName": "co.mellybabyshop.co.za",
     "androidSigningKey": "release",
     "injectMedianJS": true,
     "forceSessionCookieExpiry": 0,
     "iosCustomHeaders": {},
     "androidCustomHeaders": {},
-    "version": 355
+    "version": 466
   },
   "navigation": {
-    "tabNavigation": {
-      "tabSelectionConfig": [
-        {
-          "id": "1",
-          "regex": ".*"
-        },
-        {
-          "id": "2",
-          "regex": ".*"
-        }
-      ],
-      "tabMenus": [
-        {
-          "id": "1",
-          "items": [
-            {
-              "label": "Home",
-              "icon": "fas fa-home",
-              "inactiveIcon": "far fa-home",
-              "url": "https://www.mellybabyshop.co.za/",
-              "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/?$",
-              "subLinks": []
-            },
-            {
-              "label": "Shop",
-              "icon": "fas fa-store",
-              "inactiveIcon": "far fa-store",
-              "url": "https://www.mellybabyshop.co.za/shop/",
-              "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/shop\\/?$",
-              "subLinks": []
-            },
-            {
-              "label": "Wishlist",
-              "icon": "fas fa-heart",
-              "inactiveIcon": "far fa-heart",
-              "url": "https://www.mellybabyshop.co.za/wishlist/",
-              "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/wishlist\\/?$",
-              "subLinks": []
-            },
-            {
-              "label": "My Account",
-              "icon": "fas fa-user",
-              "inactiveIcon": "far fa-user",
-              "url": "https://www.mellybabyshop.co.za/mobile-my-account/",
-              "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-my-account\\/?$",
-              "subLinks": []
-            }
-          ]
-        },
-        {
-          "id": "2",
-          "items": []
-        }
-      ],
-      "active": true
-    },
-    "sidebarNavigation": {
-      "menuSelectionConfig": {
-        "redirectLocations": [
-          {
-            "regex": ".*",
-            "menuName": "default",
-            "loggedIn": true
-          }
-        ]
-      },
-      "menus": [
-        {
-          "active": true,
-          "items": [
-            {
-              "label": "SHOP BY CATEGORIES",
-              "icon": " ",
-              "subLinks": []
-            },
-            {
-              "url": "https://www.mellybabyshop.co.za/baby-feeding/",
-              "label": "Feeding",
-              "icon": "fas fa-utensils",
-              "subLinks": []
-            },
-            {
-              "url": "https://www.mellybabyshop.co.za/newborn-products/",
-              "label": "Newborn Products",
-              "icon": "fas fa-baby-carriage",
-              "subLinks": []
-            },
-            {
-              "url": "https://www.mellybabyshop.co.za/mom-baby-essentials/",
-              "label": "Mom & Baby Essentials",
-              "icon": "fas fa-baby",
-              "subLinks": []
-            },
-            {
-              "url": "https://www.mellybabyshop.co.za/nursery-items/",
-              "label": "Nursery Items",
-              "icon": "fas fa-bed",
-              "subLinks": []
-            },
-            {
-              "url": "https://www.mellybabyshop.co.za/travel-gear/",
-              "label": "Travel Gear",
-              "icon": "fas fa-suitcase-rolling",
-              "subLinks": []
-            },
-            {
-              "url": "https://www.mellybabyshop.co.za/baby-bathing-grooming/",
-              "label": "Bathing & Grooming",
-              "icon": "fas fa-bath",
-              "subLinks": []
-            },
-            {
-              "url": "https://www.mellybabyshop.co.za/toys-playtime/toys-and-games/",
-              "label": "Toys & Playtime",
-              "icon": "fas fa-puzzle-piece",
-              "subLinks": []
-            },
-            {
-              "url": "https://www.mellybabyshop.co.za/strollers-prams/",
-              "label": "Strollers & Prams",
-              "icon": "fas fa-baby-carriage",
-              "subLinks": []
-            }
-          ],
-          "name": "default"
-        }
-      ]
-    },
+    "ignorePageFinishedRegexes": [],
+    "redirects": [],
+    "iosSettings": {},
+    "iosPullToRefresh": true,
+    "androidPullToRefresh": false,
+    "swipeGestures": false,
+    "iosConnectionOfflineTime": 10,
+    "androidConnectionOfflineTime": 10,
     "regexInternalExternal": {
+      "active": true,
       "rules": [
         {
           "mode": "external",
@@ -222,12 +103,14 @@
           "pagesToTrigger": "all",
           "regex": ".*"
         }
-      ],
-      "active": true
+      ]
     },
-    "androidPullToRefresh": true,
-    "iosPullToRefresh": true,
+    "deepLinkDomains": {
+      "enableAndroidApplinks": false,
+      "domains": []
+    },
     "navigationTitles": {
+      "active": true,
       "titles": [
         {
           "id": "1",
@@ -308,23 +191,17 @@
         },
         {
           "id": "12",
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-my-account\\/?$",
-          "title": "My Account",
-          "showImage": false,
-          "customTitle": true
-        },
-        {
-          "id": "13",
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-my-account\\/?$",
-          "title": "My Account",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/more\\/?$",
+          "title": "More",
           "showImage": false,
           "customTitle": true
         }
-      ],
-      "active": true
+      ]
     },
-    "ignorePageFinishedRegexes": [],
+    "iosShowRefreshButton": false,
+    "androidShowRefreshButton": false,
     "actionConfig": {
+      "active": true,
       "actions": [
         {
           "id": "1",
@@ -333,7 +210,8 @@
               "icon": "fas fa-magnifying-glass",
               "label": "",
               "url": "https://www.mellybabyshop.co.za/?s=",
-              "system": "search"
+              "system": "search",
+              "color": "#FFFFFF"
             }
           ]
         },
@@ -379,10 +257,6 @@
         },
         {
           "id": "12",
-          "items": []
-        },
-        {
-          "id": "13",
           "items": []
         }
       ],
@@ -466,28 +340,15 @@
         },
         {
           "id": "12",
-          "label": "My Account",
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-my-account\\/?$",
+          "label": "More",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/more\\/?$",
           "custom": false,
-          "url": "https://www.mellybabyshop.co.za/mobile-my-account/"
-        },
-        {
-          "id": "13",
-          "label": "My Account",
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-my-account\\/?$",
-          "custom": false,
-          "url": "https://www.mellybabyshop.co.za/mobile-my-account/"
+          "url": "https://www.mellybabyshop.co.za/more/"
         }
-      ],
-      "active": true
-    },
-    "androidShowRefreshButton": false,
-    "iosShowRefreshButton": false,
-    "deepLinkDomains": {
-      "domains": [],
-      "enableAndroidApplinks": false
+      ]
     },
     "navigationLevels": {
+      "active": true,
       "levels": [
         {
           "label": "Primary Tabs",
@@ -498,7 +359,7 @@
         },
         {
           "label": "Category Pages",
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/(baby-feeding|wishlist|travel-gear|strollers-prams|baby-bathing-grooming|mom-baby-essentials|baby-travel-gear|newborn-products|toys-and-games|nursery-items)\\/?$",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/(baby-feeding|wishlist|travel-gear|strollers-prams|baby-bathing-grooming|mom-baby-essentials|baby-travel-gear|newborn-products|toys-and-games|nursery-items|more)\\/?$",
           "custom": true,
           "backButtonPriority": true,
           "description": "Product category and utility pages open in a new window",
@@ -530,9 +391,157 @@
           "description": "External links open in the system browser, not inside the app",
           "level": 5
         }
-      ],
-      "active": true
+      ]
     },
+    "sidebarNavigation": {
+      "menuSelectionConfig": {
+        "redirectLocations": [
+          {
+            "regex": ".*",
+            "menuName": "default",
+            "loggedIn": true
+          }
+        ]
+      },
+      "menus": [
+        {
+          "active": true,
+          "items": [
+            {
+              "label": "SHOP BY CATEGORIES",
+              "icon": " ",
+              "subLinks": []
+            },
+            {
+              "url": "https://www.mellybabyshop.co.za/baby-feeding/",
+              "label": "Feeding",
+              "icon": "fas fa-utensils",
+              "subLinks": [
+                {
+                  "url": "https://www.mellybabyshop.co.za/baby-feeding/bottles-accessories/",
+                  "label": "Bottles & Accessories",
+                  "icon": "fas fa-bottle-baby",
+                  "subLinks": []
+                },
+                {
+                  "url": "https://www.mellybabyshop.co.za/baby-feeding/high-chairs/",
+                  "label": "High Chairs",
+                  "icon": "fas fa-chair",
+                  "subLinks": []
+                },
+                {
+                  "url": "https://www.mellybabyshop.co.za/baby-feeding/bibs-burp-cloths/",
+                  "label": "Bibs & Burp Cloths",
+                  "icon": "fas fa-hand-holding-water",
+                  "subLinks": []
+                }
+              ]
+            },
+            {
+              "url": "https://www.mellybabyshop.co.za/newborn-products/",
+              "label": "Newborn Products",
+              "icon": "fas fa-baby-carriage",
+              "subLinks": []
+            },
+            {
+              "url": "https://www.mellybabyshop.co.za/mom-baby-essentials/",
+              "label": "Mom & Baby Essentials",
+              "icon": "fas fa-baby",
+              "subLinks": []
+            },
+            {
+              "url": "https://www.mellybabyshop.co.za/nursery-items/",
+              "label": "Nursery Items",
+              "icon": "fas fa-bed",
+              "subLinks": []
+            },
+            {
+              "url": "https://www.mellybabyshop.co.za/travel-gear/",
+              "label": "Travel Gear",
+              "icon": "fas fa-suitcase-rolling",
+              "subLinks": []
+            },
+            {
+              "url": "https://www.mellybabyshop.co.za/baby-bathing-grooming/",
+              "label": "Bathing & Grooming",
+              "icon": "fas fa-bath",
+              "subLinks": []
+            },
+            {
+              "url": "https://www.mellybabyshop.co.za/toys-playtime/toys-and-games/",
+              "label": "Toys & Playtime",
+              "icon": "fas fa-puzzle-piece",
+              "subLinks": []
+            },
+            {
+              "url": "https://www.mellybabyshop.co.za/strollers-prams/",
+              "label": "Strollers & Prams",
+              "icon": "fas fa-baby-carriage",
+              "subLinks": []
+            }
+          ],
+          "name": "default"
+        }
+      ]
+    },
+    "tabNavigation": {
+      "active": true,
+      "tabMenus": [
+        {
+          "id": "1",
+          "items": [
+            {
+              "label": "Home",
+              "icon": "fas fa-home",
+              "inactiveIcon": "far fa-home",
+              "url": "https://www.mellybabyshop.co.za/",
+              "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/?$",
+              "subLinks": []
+            },
+            {
+              "label": "Shop",
+              "icon": "fas fa-store",
+              "inactiveIcon": "far fa-store",
+              "url": "https://www.mellybabyshop.co.za/shop/",
+              "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/shop\\/?$",
+              "subLinks": []
+            },
+            {
+              "label": "Wishlist",
+              "icon": "fas fa-heart",
+              "inactiveIcon": "far fa-heart",
+              "url": "https://www.mellybabyshop.co.za/wishlist/",
+              "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/wishlist\\/?$",
+              "subLinks": []
+            },
+            {
+              "label": "More",
+              "icon": "fas fa-bars",
+              "inactiveIcon": "far fa-bars",
+              "url": "https://www.mellybabyshop.co.za/more/",
+              "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/more\\/?$",
+              "subLinks": []
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "items": []
+        }
+      ],
+      "tabSelectionConfig": [
+        {
+          "id": "1",
+          "regex": ".*"
+        },
+        {
+          "id": "2",
+          "regex": ".*"
+        }
+      ]
+    },
+    "androidShowOfflinePage": true,
+    "iosShowOfflinePage": true,
     "toolbarNavigation": {
       "enabled": false,
       "visibilityByPages": "specificPages",
@@ -581,13 +590,6 @@
         }
       ]
     },
-    "redirects": [],
-    "iosShowOfflinePage": true,
-    "iosConnectionOfflineTime": 10,
-    "androidShowOfflinePage": true,
-    "androidConnectionOfflineTime": 10,
-    "iosSettings": {},
-    "swipeGestures": false,
     "maxWindows": {
       "enabled": false,
       "numWindows": 5,
@@ -597,116 +599,53 @@
   "styling": {
     "splashScreen": {
       "ios": {
-        "animationLoop": "once",
-        "backgroundColor": "#ffffff",
+        "backgroundImage": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1746314709317_nf1510v6buwb4_D43D9D_1_2x2.png",
+        "backgroundImageDark": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1746314709329_2gy88nt78r2km_000000_1_2x2.png",
+        "backgroundColor": "#D43D9D",
         "backgroundColorDark": "#000000",
-        "backgroundImage": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1744330240297_x5j478b04ed7j_ffffff_1_2x2.png",
-        "backgroundImageDark": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1744330240312_0dkah4abaj1mw_000000_1_2x2.png",
-        "animated": false,
-        "centerImage": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/mell-hd_1744242540034.png",
-        "centerImageDark": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/ios-Dark_1744242928600.png",
+        "centerImage": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/SplashScreen_1746314687172.png",
+        "centerImageDark": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/SplashScreen_1746314699631.png",
         "animation": null,
         "animationDark": null,
         "animationFrame": null,
-        "animationFrameDark": null
+        "animationFrameDark": null,
+        "animationLoop": "once",
+        "animated": false
       },
       "android": {
         "launchImages": {
-          "mdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1744330240635_nz2bn5g00fq7m_180x180.png",
-          "hdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1744330240648_0m3hne1rhauf8_270x270.png",
-          "xhdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1744330240662_075acr84vfyw6_360x360.png",
-          "xxhdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1744330240676_g4fb07h717234_540x540.png",
-          "xxxhdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1744330240682_x9bb712babvt8_720x720.png"
+          "mdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1746314709487_1dn1z5p0ye148_180x180.png",
+          "hdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1746314709497_7n1g03qch75b4_270x270.png",
+          "xhdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1746314709506_efeb0wudywq1w_360x360.png",
+          "xxhdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1746314709519_fc9mu7244zxh2_540x540.png",
+          "xxxhdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1746314709532_3ak4uan4kfvhp_720x720.png"
         },
         "launchImagesDark": {
-          "mdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1744330240703_6e473177azcup_180x180.png",
-          "hdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1744330240728_7pkwg2tjkceer_270x270.png",
-          "xhdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1744330240757_h4w6f3pfdp4ve_360x360.png",
-          "xxhdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1744330240785_zjem589550fjw_540x540.png",
-          "xxxhdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1744330240838_219wxgdgm1vuj_720x720.png"
+          "mdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1746314709551_3veut8mr5yhvw_180x180.png",
+          "hdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1746314709581_3n8kdau46213c_270x270.png",
+          "xhdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1746314709615_uaubfp0c6ke68_360x360.png",
+          "xxhdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1746314709634_qq12vyzvrfmgy_540x540.png",
+          "xxxhdpi": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/1746314709658_hd20h4aaatq7u_720x720.png"
         },
         "showSplash": true,
-        "animationLoop": "once",
-        "backgroundColor": "#ffffff",
+        "backgroundColor": "#D43D9D",
         "backgroundColorDark": "#000000",
-        "animated": false,
         "animation": null,
         "animationDark": null,
         "animationFrame": null,
-        "animationFrameDark": null
+        "animationFrameDark": null,
+        "animationLoop": "once",
+        "animated": false
       }
     },
     "transitionInteractiveDelayMax": 0.2,
     "menuAnimationDuration": 0.15,
-    "disableAnimations": false,
-    "hideWebviewAlpha": 0.5,
-    "iosDarkMode": "auto",
-    "iosTitleColor": "#000000",
-    "iosTitleColorDark": "#ffffff",
-    "iosTintColor": "#D43D9D",
-    "iosTintColorDark": "#ffffff",
-    "iosSidebarTextColor": "#0E0D08",
-    "iosSidebarTextColorDark": "#ffffff",
-    "iosStatusBarBackgroundColor": "#ffffffff",
-    "iosStatusBarBackgroundColorDark": "#000000",
-    "iosEnableBlurInStatusBar": false,
-    "iosSidebarBackgroundColor": "#f8f8f8",
-    "iosSidebarBackgroundColorDark": "#202020",
-    "iosNavigationBarTintColor": "#F2F2F7",
-    "iosNavigationBarTintColorDark": "#202020",
-    "iosTabBarTintColor": "#F2F2F7",
-    "iosTabBarTintColorDark": "#000000",
-    "iosTabBarInactiveColor": "#3C3C43",
-    "iosTabBarInactiveColorDark": "#818181",
-    "icon": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/app_icon_ios_1744223987681.png",
-    "iosHeaderImage": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/ios-Light_1744736066051.png",
-    "showActionBar": true,
-    "showNavigationBar": true,
-    "iosSidebarFont": "Default",
-    "androidHideTitleInActionBar": false,
-    "navigationTitleImage": false,
     "iosTheme": "default",
-    "androidTheme": "auto",
-    "androidBackgroundColor": "#FFFFFF",
-    "androidSidebarBackgroundColor": "#FFFFFF",
-    "androidSidebarForegroundColor": "#1A100B",
-    "androidActionBarBackgroundColor": "#F2F2F7",
-    "androidActionBarForegroundColor": "#000000",
-    "androidPullToRefreshColor": "#1A100B",
-    "androidAccentColor": "#D43D9D",
-    "androidSidebarSeparatorColor": "#CCCCCC",
-    "androidSidebarHighlightColor": "#1A100B",
-    "androidTabBarBackgroundColor": "#F2F2F7",
-    "androidTabBarTextColor": "#3C3C43",
-    "androidTabBarIndicatorColor": "#D43D9D",
     "androidTabPressedBackgroundColor": "#CCCCCC",
-    "androidStatusBarBackgroundColor": "#5C5C5C",
-    "androidShowLogoInSideBar": true,
-    "androidShowAppNameInSideBar": false,
-    "androidSwipeNavigationBackgroundColor": "#FFFFFF",
-    "androidSwipeNavigationActiveColor": "#000000",
-    "androidSwipeNavigationInactiveColor": "#666666",
-    "androidActionBarBackgroundColorDark": "#333333",
-    "androidStatusBarBackgroundColorDark": "#333333",
-    "androidActionBarForegroundColorDark": "#FFFFFF",
-    "androidAccentColorDark": "#80cbc4",
-    "androidBackgroundColorDark": "#333333",
-    "androidSidebarForegroundColorDark": "#FFFFFF",
-    "androidSidebarBackgroundColorDark": "#333333",
-    "androidSidebarSeparatorColorDark": "#666666",
-    "androidSidebarHighlightColorDark": "#FFFFFF",
-    "androidPullToRefreshColorDark": "#FFFFFF",
-    "androidTabBarTextColorDark": "#FFFFFF",
-    "androidTabBarBackgroundColorDark": "#333333",
-    "androidTabBarIndicatorColorDark": "#666666",
     "androidTabPressedBackgroundColorDark": "#999999",
-    "androidSwipeNavigationBackgroundColorDark": "#333333",
-    "androidSwipeNavigationActiveColorDark": "#FFFFFF",
-    "androidSwipeNavigationInactiveColorDark": "#666666",
-    "androidSystemNavBarColor": "#FFFFFF",
-    "androidSystemNavBarColorDark": "#000000",
-    "androidWebviewTextZoom": null,
-    "androidIcon": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/app_icon_ios_1743883226394.png",
+    "androidBackgroundColor": "#FFFFFF",
+    "androidBackgroundColorDark": "#333333",
+    "icon": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/app_icon_ios_1744223987681.png",
     "iosIcon": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/app_icon_ios_1744223987681.png",
     "customIcons": {
       "fontelloSessionId": "f6cff08a9e0d993ce8dc18720462623f",
@@ -714,32 +653,111 @@
       "font": "https://s3.amazonaws.com/gonativeio/custom_icons/1745693584994_qx909kxjmbhf4/custom-icons.ttf",
       "fontelloConfigJson": "https://s3.amazonaws.com/gonativeio/custom_icons/1745693584994_qx909kxjmbhf4/config.json"
     },
+    "iosDarkMode": "auto",
+    "iosEnableBlurInStatusBar": false,
     "iosStatusBarStyle": "auto",
     "iosEnableOverlayInStatusBar": false,
+    "iosStatusBarBackgroundColor": "#D43D9D",
+    "iosStatusBarBackgroundColorDark": "#ffffff",
     "androidStatusBarStyle": "auto",
     "androidEnableOverlayInStatusBar": false,
+    "androidStatusBarBackgroundColor": "#D43D9D",
+    "androidStatusBarBackgroundColorDark": "#202020",
+    "iosTintColor": "#D43D9D",
+    "iosTintColorDark": "#ffffff",
+    "customCSSUrl": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/custom_css_1746138241169.css",
+    "androidIcon": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/app_icon_ios_1743883226394.png",
+    "androidTheme": "auto",
+    "androidAccentColor": "#D43D9D",
+    "androidAccentColorDark": "#FFFFFF",
+    "androidSystemNavBarColor": "#D43D9D",
+    "androidSystemNavBarColorDark": "#202020",
+    "androidPullToRefreshColor": "#1A100B",
+    "androidPullToRefreshColorDark": "#FFFFFF",
     "iosActivityIndicatorColor": "#808080",
     "iosActivityIndicatorColorDark": "#808080",
     "androidActivityIndicatorColor": "#808080",
     "androidActivityIndicatorColorDark": "#808080",
+    "androidWebviewTextZoom": null,
+    "hideWebviewAlpha": 0.5,
     "forceViewportWidth": null,
     "pinchToZoom": false,
-    "iosDynamicType": true,
+    "iosDynamicType": false,
+    "androidSwipeNavigationBackgroundColor": "#D43D9D",
+    "androidSwipeNavigationBackgroundColorDark": "#000000",
+    "androidSwipeNavigationActiveColor": "#D43D9D",
+    "androidSwipeNavigationActiveColorDark": "#FFFFFF",
+    "androidSwipeNavigationInactiveColor": "#C2C2C2",
+    "androidSwipeNavigationInactiveColorDark": "#e0dede",
     "navigationTitleImageLocation": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/CAT_1745695991870.png",
     "navigationTitleImageLocationDark": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/ios-Light_1743886530679.png",
+    "iosTitleColor": "#A0A0A0",
+    "iosTitleColorDark": "#ffffff",
+    "iosNavigationBarTintColor": "#F9F9F9",
+    "iosNavigationBarTintColorDark": "#202020",
+    "androidActionBarBackgroundColor": "#F9F9F9",
+    "androidActionBarBackgroundColorDark": "#202020",
     "androidHeaderImage": "assets/defaults/app-icon-placeholder.png",
     "androidHeaderImageDark": "assets/defaults/app-icon-placeholder.png",
+    "androidActionBarForegroundColor": "#D43D9D",
+    "androidActionBarForegroundColorDark": "#FFFFFF",
+    "iosSidebarBackgroundColor": "#F5F5F5",
+    "iosSidebarBackgroundColorDark": "#202020",
+    "iosSidebarFont": "Helvetica",
+    "iosHeaderImage": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/ios-Light_1744736066051.png",
     "iosHeaderImageDark": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/ios-Dark_1744223908421.png",
-    "customCSSUrl": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/custom_css_1746138241169.css"
+    "iosSidebarTextColor": "#212121",
+    "iosSidebarTextColorDark": "#E0E0E0",
+    "androidSidebarBackgroundColor": "#F5F5F5",
+    "androidSidebarBackgroundColorDark": "#202020",
+    "androidSidebarForegroundColor": "#333333",
+    "androidSidebarForegroundColorDark": "#E0E0E0",
+    "androidSidebarSeparatorColor": "#E0E0E0",
+    "androidSidebarSeparatorColorDark": "#333333",
+    "androidSidebarHighlightColor": "#D43D9D",
+    "androidSidebarHighlightColorDark": "#D43D9D",
+    "androidShowLogoInSideBar": true,
+    "androidShowAppNameInSideBar": false,
+    "androidTabBarBackgroundColor": "#F9F9F9",
+    "androidTabBarBackgroundColorDark": "#202020",
+    "androidTabBarTextColor": "#A0A0A0",
+    "androidTabBarTextColorDark": "#888888",
+    "androidTabBarIndicatorColor": "#D43D9D",
+    "androidTabBarIndicatorColorDark": "#FFFFFF",
+    "iosTabBarTintColor": "#F9F9F9",
+    "iosTabBarTintColorDark": "#202020",
+    "iosTabBarInactiveColor": "#A0A0A0",
+    "iosTabBarInactiveColorDark": "#888888",
+    "disableAnimations": false,
+    "navigationTitleImage": false,
+    "androidHideTitleInActionBar": false,
+    "showNavigationBar": true,
+    "showActionBar": true
+  },
+  "script": {
+    "customJSUrl": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/custom_js_1746198204110.js"
+  },
+  "allowZoom": null,
+  "contextMenu": {
+    "enabled": false,
+    "linkActions": [
+      "copyLink",
+      "openExternal"
+    ]
+  },
+  "security": {
+    "network": {
+      "allowInsecure": null
+    }
   },
   "permissions": {
     "usesGeolocation": false,
-    "androidDownloadToPublicStorage": false,
-    "enableWebRTCamera": false,
-    "enableWebRTCMicrophone": false,
     "iosLocationUsageDescription": "",
     "iosCameraUsageDescription": "",
     "iosMicrophoneUsageDescription": "",
+    "enableWebRTCamera": false,
+    "enableWebRTCMicrophone": false,
+    "androidDownloadToPublicStorage": false,
     "iOSATTUserTrackingDescription": "Your data will be used to personalize your experience and at times to deliver personalized ads",
     "iOSRequestATTConsentOnLoad": true
   },
@@ -750,22 +768,5 @@
     "oneSignalV5": {
       "active": false
     }
-  },
-  "contextMenu": {
-    "linkActions": [
-      "copyLink",
-      "openExternal"
-    ],
-    "enabled": false
-  },
-  "allowZoom": null,
-  "security": {
-    "network": {
-      "allowInsecure": null
-    }
-  },
-  "script": {
-    "customJSUrl": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/custom_js_1745870533949.js",
-    "androidCustomJSUrl": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/android_custom_js_1745870490104.js"
   }
 }
