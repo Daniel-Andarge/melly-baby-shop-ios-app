@@ -61,6 +61,4 @@ workflows:
       app_store_connect:
         auth: integration
         submit_to_testflight: true
-        beta_groups:
-          - internal testers
         submit_to_app_store: false
