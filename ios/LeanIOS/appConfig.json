@@ -29,7 +29,7 @@
     "forceSessionCookieExpiry": 0,
     "iosCustomHeaders": {},
     "androidCustomHeaders": {},
-    "version": 510
+    "version": 521
   },
   "navigation": {
     "ignorePageFinishedRegexes": [],
@@ -93,9 +93,57 @@
         },
         {
           "mode": "internal",
+          "label": "Cart Page",
+          "pagesToTrigger": "custom",
+          "regex": "https?:\\/\\/(www\\.)?mellybabyshop\\.co\\.za\\/cart\\/?$"
+        },
+        {
+          "mode": "internal",
+          "label": "Checkout Page",
+          "pagesToTrigger": "custom",
+          "regex": "https?:\\/\\/(www\\.)?mellybabyshop\\.co\\.za\\/checkout\\/?$"
+        },
+        {
+          "mode": "internal",
+          "label": "Auth Pages",
+          "pagesToTrigger": "custom",
+          "regex": "https?:\\/\\/(www\\.)?mellybabyshop\\.co\\.za\\/(app-login|app-register|app-reset-password)\\/?$"
+        },
+        {
+          "mode": "internal",
+          "label": "Account Area",
+          "pagesToTrigger": "custom",
+          "regex": "https?:\\/\\/(www\\.)?mellybabyshop\\.co\\.za\\/my-account(\\/orders|\\/edit-address|\\/payment-methods|\\/edit-account)?\\/?$"
+        },
+        {
+          "mode": "internal",
+          "label": "Track Orders",
+          "pagesToTrigger": "custom",
+          "regex": "https?:\\/\\/(www\\.)?mellybabyshop\\.co\\.za\\/track-your-order\\/?$"
+        },
+        {
+          "mode": "appbrowser",
+          "label": "Legal and Support Pages",
+          "pagesToTrigger": "custom",
+          "regex": "https?:\\/\\/(www\\.)?mellybabyshop\\.co\\.za\\/(mobile-(contact|shipping-returns|faqs|terms)|privacy-policy-mobile)\\/?$"
+        },
+        {
+          "mode": "appbrowser",
+          "label": "External Payment Links",
+          "pagesToTrigger": "custom",
+          "regex": "https?:\\/\\/(www\\.)?(paypal|flutterwave|payfast|stripe)\\.com\\/.*"
+        },
+        {
+          "mode": "internal",
           "label": "All pages on my domain",
           "pagesToTrigger": "domain",
           "regex": "https?:\\/\\/([-\\w]+\\.)*co.za(\\/.*)?$"
+        },
+        {
+          "mode": "appbrowser",
+          "label": "Paystack Checkout",
+          "pagesToTrigger": "custom",
+          "regex": "https?:\\/\\/checkout\\.paystack\\.com\\/.*"
         },
         {
           "mode": "appbrowser",
@@ -300,6 +348,20 @@
           "title": "Cart",
           "showImage": false,
           "customTitle": true
+        },
+        {
+          "id": "28",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/checkout\\/?$",
+          "title": "Checkout",
+          "showImage": false,
+          "customTitle": true
+        },
+        {
+          "id": "29",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/woo-dashboard\\/?$",
+          "title": "My Account",
+          "showImage": false,
+          "customTitle": true
         }
       ]
     },
@@ -422,6 +484,14 @@
         },
         {
           "id": "27",
+          "items": []
+        },
+        {
+          "id": "28",
+          "items": []
+        },
+        {
+          "id": "29",
           "items": []
         }
       ],
@@ -584,6 +654,20 @@
           "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/more\\/?$",
           "custom": false,
           "url": "https://www.mellybabyshop.co.za/more/"
+        },
+        {
+          "id": "28",
+          "label": "Checkout",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/checkout\\/?$",
+          "custom": false,
+          "url": "https://www.mellybabyshop.co.za/checkout/"
+        },
+        {
+          "id": "29",
+          "label": "My Account",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/woo-dashboard\\/?$",
+          "custom": false,
+          "url": "https://www.mellybabyshop.co.za/woo-dashboard/"
         }
       ]
     },
@@ -599,7 +683,7 @@
         },
         {
           "label": "Category Pages",
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/(baby-feeding|wishlist|travel-gear|strollers-prams|baby-bathing-grooming|mom-baby-essentials|baby-travel-gear|newborn-products|toys-and-games|nursery-items|more)\\/?$",
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/(baby-feeding|wishlist|travel-gear|strollers-prams|baby-bathing-grooming|mom-baby-essentials|baby-travel-gear|newborn-products|toys-and-games|nursery-items|more|woo-dashboard)\\/?$",
           "custom": true,
           "backButtonPriority": true,
           "description": "Product category pages open in a new window",
@@ -815,7 +899,7 @@
               "label": "Wishlist",
               "icon": "fas fa-heart",
               "inactiveIcon": "far fa-heart",
-              "url": "javascript:https://www.mellybabyshop.co.za/wishlist/",
+              "url": "https://www.mellybabyshop.co.za/wishlist/",
               "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/wishlist\\/?$",
               "subLinks": []
             },
