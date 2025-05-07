@@ -1,0 +1,66 @@
+workflows:
+  ios-workflow:
+    name: Melly Baby Shop iOS Build
+    working_directory: ios
+    max_build_duration: 60
+    instance_type: mac_mini_m2
+
+    integrations:
+      app_store_connect: codemagic
+
+    environment:
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: co.mellybabyshop.co.za
+
+      vars:
+        BUNDLE_ID: 'co.mellybabyshop.co.za'
+        APP_NAME: 'Melly Baby Shop'
+        XCODE_WORKSPACE: 'MellyBabyShop.xcworkspace'
+        XCODE_SCHEME: 'MellyBabyShop'
+        APP_STORE_APPLE_ID: 6745569837
+
+      xcode: latest
+      cocoapods: default
+
+    scripts:
+      - name: Install CocoaPods dependencies
+        script: |
+          pod install
+
+      - name: Set up provisioning profiles settings on Xcode project
+        script: |
+          xcode-project use-profiles
+
+      - name: Increment build number based on latest App Store version
+        script: |
+          cd $CM_BUILD_DIR
+          LATEST_BUILD_NUMBER=$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID")
+          agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
+
+      - name: Build .ipa for App Store distribution
+        script: |
+          xcode-project build-ipa \
+            --workspace "$CM_BUILD_DIR/$XCODE_WORKSPACE" \
+            --scheme "$XCODE_SCHEME"
+
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+
+    publishing:
+      email:
+        recipients:
+          - andargedaniel90@gmail.com
+        notify:
+          success: true
+          failure: true
+
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
+        beta_groups:
+          - internal testers
+        submit_to_app_store: false
