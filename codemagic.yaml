@@ -27,7 +27,7 @@ workflows:
           echo "=== ACTIVE SIGNING IDENTITY ==="
           security find-identity -v -p codesigning
           echo "=== PROVISIONING PROFILE ==="
-          xcode-project detect-profiles
+          xcode-project use-profiles
 
       - name: Set up provisioning profiles
         script: xcode-project use-profiles
