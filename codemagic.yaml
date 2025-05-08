@@ -1,16 +1,17 @@
 workflows:
   ios-workflow:
     name: Melly Baby Shop iOS Build
-    working_directory: ios/
     max_build_duration: 120
     instance_type: mac_mini_m2
+    working_directory: ios/
+
+    integrations:
+      app_store_connect: CodeMagic Integration Key
 
     environment:
       ios_signing:
         distribution_type: app_store
         bundle_identifier: co.mellybabyshop.co.za
-        team_id: UVKRVXQ95Z # Your Apple Team ID
-        certificate_type: apple_distribution
 
       vars:
         BUNDLE_ID: 'co.mellybabyshop.co.za'
@@ -21,24 +22,22 @@ workflows:
       xcode: latest
 
     scripts:
-      - name: Verify Bundle Identifier
+      - name: Verify Code Signing
         script: |
-          # Ensure bundle ID matches provisioning profile
-          plutil -replace CFBundleIdentifier -string "$BUNDLE_ID" LeanIOS/Info.plist
-          plutil -replace CFBundleIdentifier -string "$BUNDLE_ID" LeanIOSTests/Info.plist
+          echo "=== ACTIVE SIGNING IDENTITY ==="
+          security find-identity -v -p codesigning
+          echo "=== PROVISIONING PROFILE ==="
+          xcode-project use-profiles
 
       - name: Set up provisioning profiles
-        script: |
-          xcode-project use-profiles \
-            --team-id UVKRVXQ95Z \
-            --bundle-identifier "$BUNDLE_ID"
+        script: xcode-project use-profiles
 
       - name: Increment build number
         script: |
           LATEST_BUILD_NUMBER=$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID")
           agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
 
-      - name: Build IPA with Destination
+      - name: Build IPA
         script: |
           xcode-project build-ipa \
             --workspace "$XCODE_WORKSPACE" \
@@ -48,6 +47,8 @@ workflows:
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
 
     publishing:
       email:
@@ -56,7 +57,3 @@ workflows:
         notify:
           success: true
           failure: true
-      app_store_connect:
-        auth: integration
-        submit_to_testflight: true
-        submit_to_app_store: false
