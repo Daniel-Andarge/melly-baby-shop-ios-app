@@ -1,7 +1,7 @@
 workflows:
   ios-workflow:
     name: Melly Baby Shop iOS Build
-    working_directory: melly-baby-shop-ios-app/ios
+    working_directory: ios/  
     max_build_duration: 60
     instance_type: mac_mini_m2
 
@@ -26,8 +26,7 @@ workflows:
     scripts:
       - name: Install CocoaPods dependencies
         script: |
-
-          pod install
+          pod install --repo-update  
 
       - name: Set up provisioning profiles settings on Xcode project
         script: |
@@ -35,14 +34,13 @@ workflows:
 
       - name: Increment build number based on latest App Store version
         script: |
-          cd $CM_BUILD_DIR
           LATEST_BUILD_NUMBER=$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID")
-          agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
+          agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))  # ✅ Removed unnecessary cd
 
       - name: Build .ipa for App Store distribution
         script: |
           xcode-project build-ipa \
-            --workspace "$CM_BUILD_DIR/$XCODE_WORKSPACE" \
+            --workspace "$XCODE_WORKSPACE" \ 
             --scheme "$XCODE_SCHEME"
 
     artifacts:
@@ -61,5 +59,5 @@ workflows:
 
       app_store_connect:
         auth: integration
-        submit_to_testflight: true
+        submit_to_testflight: false
         submit_to_app_store: false
