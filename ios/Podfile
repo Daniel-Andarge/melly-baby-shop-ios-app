@@ -1,29 +1,24 @@
-# Uncomment the next line to define a global platform for your project
+# Minimum Podfile configuration for Median-managed projects
 platform :ios, '13.0'
 
+# Only use public CocoaPods repo (remove private spec repos)
 source 'https://cdn.cocoapods.org/'
-source 'git@github.com:gonativeio/gonative-specs.git'
 
+# Keep plugins integration if required by Median
 require_relative './plugins.rb'
 
-target default_app_target do
-  # Comment the next line if you don't want to use dynamic frameworks
+target 'MellyBabyShop' do
+  # Required for Swift pods (keep unless Median specifies otherwise)
   use_frameworks!
 
-  # Pods for GonativeIO
-  pod 'GoNativeCore'
-  pod 'MedianIcons'
-  pod 'SSZipArchive'
-  
+  # Median will inject all core dependencies automatically
+  # No need to explicitly list pods like GoNativeCore/MedianIcons
+
+  # Keep if Median's plugin system requires this
   use_plugins!
-
-  target 'MedianIOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end
 
+# Maintain post_install hooks (Median may override if needed)
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|

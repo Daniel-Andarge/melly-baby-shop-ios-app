@@ -21,13 +21,8 @@ workflows:
         APP_STORE_APPLE_ID: 6745569837
 
       xcode: latest
-      cocoapods: default
 
     scripts:
-      - name: Install CocoaPods dependencies
-        script: |
-          pod install --repo-update
-
       - name: Set up provisioning profiles settings on Xcode project
         script: |
           xcode-project use-profiles
@@ -40,7 +35,7 @@ workflows:
       - name: Build .ipa for App Store distribution
         script: |
           xcode-project build-ipa \
-            --workspace "$XCODE_WORKSPACE" \ 
+            --workspace "$XCODE_WORKSPACE" \
             --scheme "$XCODE_SCHEME"
 
     artifacts:
