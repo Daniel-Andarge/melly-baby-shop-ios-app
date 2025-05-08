@@ -29,7 +29,7 @@
     "forceSessionCookieExpiry": 0,
     "iosCustomHeaders": {},
     "androidCustomHeaders": {},
-    "version": 521
+    "version": 540
   },
   "navigation": {
     "ignorePageFinishedRegexes": [],
@@ -376,9 +376,8 @@
             {
               "icon": "fas fa-magnifying-glass",
               "label": "",
-              "url": "https://www.mellybabyshop.co.za/?s=",
               "system": "search",
-              "color": "#FFFFFF"
+              "url": "https://www.mellybabyshop.co.za/?s="
             }
           ]
         },
@@ -498,85 +497,85 @@
       "actionSelection": [
         {
           "id": "1",
-          "custom": false,
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/my-account\\/orders\\/?$"
-        },
-        {
-          "id": "2",
-          "custom": false,
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/my-account\\/edit-address\\/?$"
-        },
-        {
-          "id": "3",
-          "custom": false,
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/my-account\\/payment-methods\\/?$"
-        },
-        {
-          "id": "4",
-          "custom": false,
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/my-account\\/edit-account\\/?$"
-        },
-        {
-          "id": "5",
-          "custom": false,
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/my-account\\/?$"
-        },
-        {
-          "id": "6",
-          "custom": false,
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/track-your-order\\/?$"
-        },
-        {
-          "id": "7",
-          "custom": false,
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-contact\\/?$"
-        },
-        {
-          "id": "8",
-          "custom": false,
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-shipping-returns\\/?$"
-        },
-        {
-          "id": "9",
-          "custom": false,
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-faqs\\/?$"
-        },
-        {
-          "id": "10",
-          "custom": false,
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-terms\\/?$"
-        },
-        {
-          "id": "11",
-          "custom": false,
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/privacy-policy-mobile\\/?$"
-        },
-        {
-          "id": "12",
-          "custom": false,
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/app-login\\/?$"
-        },
-        {
-          "id": "13",
-          "custom": false,
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/app-register\\/?$"
-        },
-        {
-          "id": "14",
-          "custom": false,
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/app-reset-password\\/?$"
-        },
-        {
-          "id": "15",
-          "custom": false,
-          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/cart\\/?$"
-        },
-        {
-          "id": "16",
           "label": "Home",
           "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/?$",
           "custom": false,
           "url": "https://www.mellybabyshop.co.za/"
+        },
+        {
+          "id": "2",
+          "custom": false,
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/my-account\\/orders\\/?$"
+        },
+        {
+          "id": "3",
+          "custom": false,
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/my-account\\/edit-address\\/?$"
+        },
+        {
+          "id": "4",
+          "custom": false,
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/my-account\\/payment-methods\\/?$"
+        },
+        {
+          "id": "5",
+          "custom": false,
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/my-account\\/edit-account\\/?$"
+        },
+        {
+          "id": "6",
+          "custom": false,
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/my-account\\/?$"
+        },
+        {
+          "id": "7",
+          "custom": false,
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/track-your-order\\/?$"
+        },
+        {
+          "id": "8",
+          "custom": false,
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-contact\\/?$"
+        },
+        {
+          "id": "9",
+          "custom": false,
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-shipping-returns\\/?$"
+        },
+        {
+          "id": "10",
+          "custom": false,
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-faqs\\/?$"
+        },
+        {
+          "id": "11",
+          "custom": false,
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/mobile-terms\\/?$"
+        },
+        {
+          "id": "12",
+          "custom": false,
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/privacy-policy-mobile\\/?$"
+        },
+        {
+          "id": "13",
+          "custom": false,
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/app-login\\/?$"
+        },
+        {
+          "id": "14",
+          "custom": false,
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/app-register\\/?$"
+        },
+        {
+          "id": "15",
+          "custom": false,
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/app-reset-password\\/?$"
+        },
+        {
+          "id": "16",
+          "custom": false,
+          "regex": "https?:\\/\\/(w{3}\\.)?mellybabyshop\\.co\\.za\\/cart\\/?$"
         },
         {
           "id": "17",
@@ -1081,7 +1080,7 @@
     "navigationTitleImageLocationDark": "https://s3.amazonaws.com/gonativeio/app_files/bzqyyn/ios-Light_1743886530679.png",
     "iosTitleColor": "#A0A0A0",
     "iosTitleColorDark": "#ffffff",
-    "iosNavigationBarTintColor": "#FFFFFF",
+    "iosNavigationBarTintColor": "#FfFfFf",
     "iosNavigationBarTintColorDark": "#202020",
     "androidActionBarBackgroundColor": "#FFFFFF",
     "androidActionBarBackgroundColorDark": "#202020",
