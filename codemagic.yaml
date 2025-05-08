@@ -1,9 +1,9 @@
 workflows:
   ios-workflow:
     name: Melly Baby Shop iOS Build
-    working_directory: ios/
-    max_build_duration: 60
+    max_build_duration: 120
     instance_type: mac_mini_m2
+    working_directory: ios/
 
     integrations:
       app_store_connect: CodeMagic Integration Key
@@ -15,7 +15,6 @@ workflows:
 
       vars:
         BUNDLE_ID: 'co.mellybabyshop.co.za'
-        APP_NAME: 'Melly Baby Shop'
         XCODE_WORKSPACE: 'MellyBabyShop.xcworkspace'
         XCODE_SCHEME: 'MellyBabyShop'
         APP_STORE_APPLE_ID: 6745569837
@@ -23,16 +22,22 @@ workflows:
       xcode: latest
 
     scripts:
-      - name: Set up provisioning profiles settings on Xcode project
+      - name: Verify Code Signing
         script: |
-          xcode-project use-profiles
+          echo "=== ACTIVE SIGNING IDENTITY ==="
+          security find-identity -v -p codesigning
+          echo "=== PROVISIONING PROFILE ==="
+          xcode-project detect-profiles
 
-      - name: Increment build number based on latest App Store version
+      - name: Set up provisioning profiles
+        script: xcode-project use-profiles
+
+      - name: Increment build number
         script: |
           LATEST_BUILD_NUMBER=$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID")
           agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
 
-      - name: Build .ipa for App Store distribution
+      - name: Build IPA
         script: |
           xcode-project build-ipa \
             --workspace "$XCODE_WORKSPACE" \
