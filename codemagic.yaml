@@ -12,6 +12,9 @@ workflows:
       ios_signing:
         distribution_type: app_store
         bundle_identifier: co.mellybabyshop.co.za
+        team_id: UVKRVXQ95Z
+        certificate_type: apple_distribution
+        provisioning_profile_specifier: 'codemagic_mobprovision_distribution'
 
       vars:
         BUNDLE_ID: 'co.mellybabyshop.co.za'
@@ -19,24 +22,40 @@ workflows:
         XCODE_WORKSPACE: 'MellyBabyShop.xcworkspace'
         XCODE_SCHEME: 'MellyBabyShop'
         APP_STORE_APPLE_ID: 6745569837
+        PROVISIONING_PROFILE_SPECIFIER: 'codemagic_mobprovision_distribution'
 
       xcode: latest
 
     scripts:
-      - name: Set up provisioning profiles settings on Xcode project
+      - name: Verify Signing Assets
         script: |
-          xcode-project use-profiles
+          echo "=== AVAILABLE SIGNING IDENTITIES ==="
+          security find-identity -v -p codesigning
+          echo "=== PROVISIONING PROFILES ==="
+          ls -la ~/Library/MobileDevice/Provisioning\ Profiles/
+          echo "=== ACTIVE PROFILE DETAILS ==="
+          xcode-project detect-profiles
 
-      - name: Increment build number based on latest App Store version
+      - name: Set up provisioning profiles
+        script: |
+          xcode-project use-profiles \
+            --profile "$PROVISIONING_PROFILE_SPECIFIER" \
+            --certificate "Apple Distribution"
+
+      - name: Increment build number
         script: |
           LATEST_BUILD_NUMBER=$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID")
           agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
 
-      - name: Build .ipa for App Store distribution
+      - name: Build .ipa
         script: |
           xcode-project build-ipa \
             --workspace "$XCODE_WORKSPACE" \
-            --scheme "$XCODE_SCHEME"
+            --scheme "$XCODE_SCHEME" \
+            --code_sign_style "manual" \
+            --provisioning_profile "$PROVISIONING_PROFILE_SPECIFIER" \
+            --signing_certificate "Apple Distribution" \
+            --team_id UVKRVXQ95Z
 
     artifacts:
       - build/ios/ipa/*.ipa
@@ -54,5 +73,5 @@ workflows:
 
       app_store_connect:
         auth: integration
-        submit_to_testflight: false
+        submit_to_testflight: true
         submit_to_app_store: false
