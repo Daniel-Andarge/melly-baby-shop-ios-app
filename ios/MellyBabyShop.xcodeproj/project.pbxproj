@@ -1089,10 +1089,11 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = co.median.ios.bzqyyn;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.mellybabyshop.co.za";  
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+			    PROVISIONING_PROFILE_SPECIFIER = "codemagic_mobprovision_distribution"; 
+				PROVISIONING_PROFILE = ""; 
+                DEVELOPMENT_TEAM = UVKRVXQ95Z;  
 				SWIFT_OBJC_BRIDGING_HEADER = "LeanIOS/GonativeIO-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "GonativeIO-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

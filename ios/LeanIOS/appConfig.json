@@ -1127,10 +1127,7 @@
   "allowZoom": null,
   "contextMenu": {
     "enabled": false,
-    "linkActions": [
-      "copyLink",
-      "openExternal"
-    ]
+    "linkActions": ["copyLink", "openExternal"]
   },
   "security": {
     "network": {
