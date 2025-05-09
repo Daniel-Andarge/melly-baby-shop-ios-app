@@ -1,55 +1,25 @@
 workflows:
-  ios-workflow:
-    name: Melly Baby Shop iOS Build
+  upload-ipa:
+    name: Upload IPA to App Store Connect
     max_build_duration: 120
     instance_type: mac_mini_m2
     working_directory: ios/
 
     integrations:
-      app_store_connect: CodeMagic Integration Key
+      app_store_connect: default # Changed from "CodeMagic Integration Key" to "default"
 
     environment:
-      ios_signing:
-        distribution_type: app_store
-        bundle_identifier: co.mellybabyshop.co.za
-
       vars:
-        BUNDLE_ID: 'co.mellybabyshop.co.za'
-        XCODE_WORKSPACE: 'MellyBabyShop.xcworkspace'
-        XCODE_SCHEME: 'MellyBabyShop'
-        APP_STORE_APPLE_ID: 6745569837
-
-      xcode: latest
-
-    scripts:
-      - name: Verify Code Signing
-        script: |
-          echo "=== ACTIVE SIGNING IDENTITY ==="
-          security find-identity -v -p codesigning
-          echo "=== PROVISIONING PROFILE ==="
-          xcode-project use-profiles
-
-      - name: Set up provisioning profiles
-        script: xcode-project use-profiles
-
-      - name: Increment build number
-        script: |
-          LATEST_BUILD_NUMBER=$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID")
-          agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
-
-      - name: Build IPA
-        script: |
-          xcode-project build-ipa \
-            --workspace "$XCODE_WORKSPACE" \
-            --scheme "$XCODE_SCHEME" \
+        APP_STORE_APPLE_ID: 6745644715 # Your App Store Connect App ID
 
     artifacts:
-      - build/ios/ipa/*.ipa
-      - /tmp/xcodebuild_logs/*.log
-      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
-      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+      - build/ipa/MellyBabyShop.ipa
 
     publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
+
       email:
         recipients:
           - andargedaniel90@gmail.com
