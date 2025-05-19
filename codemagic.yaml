@@ -1,27 +1,30 @@
 workflows:
   upload-ipa:
     name: Upload IPA to TestFlight
-    instance_type: mac_mini_m2
+    max_build_duration: 120
     instance_type: mac_mini_m2
     working_directory: ios/
 
     integrations:
       app_store_connect: CodeMagic Integration Key
-      
+
     environment:
       ios_signing:
         distribution_type: app_store
         bundle_identifier: 'co.median.ios.bzqyyn'
       vars:
         APP_STORE_APPLE_ID: 6745644715
+
     artifacts:
       - build/ipa/MellyBabyShop.ipa
+
     publishing:
       app_store_connect:
         auth: integration
         submit_to_testflight: true
         beta_groups:
           - 'mbs app testers'
+
       email:
         recipients:
           - andargedaniel90@gmail.com
