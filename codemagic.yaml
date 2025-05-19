@@ -2,6 +2,12 @@ workflows:
   upload-ipa:
     name: Upload IPA to TestFlight
     instance_type: mac_mini_m2
+    instance_type: mac_mini_m2
+    working_directory: ios/
+
+    integrations:
+      app_store_connect: CodeMagic Integration Key
+      
     environment:
       ios_signing:
         distribution_type: app_store
